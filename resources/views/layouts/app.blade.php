@@ -24,8 +24,10 @@
   <div id="app">
     <nav class="nav nav-pills nav-fill">
       <a class="nav-link" aria-current="page" href="{{ url('/') }}">Presentación</a>
-      <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Inicio</a>
-      <a class="nav-link" href="{{ route('fotos') }}">Mis Fotos</a>
+      <a class="nav-link" aria-current="page" href="{{ route('home') }}">Inicio</a>
+      <a class="nav-link" href="{{ route('fotos') }}">Mis Productos</a>
+      <a class="nav-link" href="{{ route('envios') }}">Envios</a>
+      <a class="nav-link" href="{{ route('fotos') }}">Pedidos</a>
 
           <ul class="navbar-nav ms-auto">
             <!-- Authentication Links -->
