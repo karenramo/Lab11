@@ -22,7 +22,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/fotos', [App\Http\Controllers\FotoController::class, 'index'])->name('fotos');
-Route::get('/envios', [App\Http\Controllers\EnviosController::class, 'index'])->name('envios');
+Route::get('/pedidos', [App\Http\Controllers\PedidosController::class, 'index'])->name('pedidos');
+Route::get('/createPedidos/{id}', [App\Http\Controllers\createPedidosController::class, 'create'])->name('createPedidos');
+Route::post('/subirPedido', [App\Http\Controllers\createPedidosController::class, 'subirPedido'])->name('subirPedido');
 Route::get('/foto/{ruta}', [App\Http\Controllers\FotoController::class, 'mostrarFoto']);
 Route::post('/subirFoto', [App\Http\Controllers\FotoController::class, 'subirFoto'])->name('subirFoto');
 Route::post('/eliminarFoto', [App\Http\Controllers\FotoController::class, 'eliminarFoto'])->name('eliminarFoto');

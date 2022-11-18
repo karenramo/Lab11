@@ -15,14 +15,12 @@ return new class extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->string('Articulo');
             $table->integer('Cantidad');
             $table->integer('Precio');
             $table->unsignedBigInteger('User_id');
             $table->foreign('User_id')->references('id')->on('users');
             $table->unsignedBigInteger('Foto_id');
             $table->foreign('Foto_id')->references('id')->on('fotos');
-            $table->timestamps();
         });
     }
 

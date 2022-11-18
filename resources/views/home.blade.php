@@ -2,32 +2,6 @@
 
 @section('content')
 <main>
-    <style>
-        body{
-            background-color: #FFEEE5;
-        }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-        .container{
-            background-image: url(https://svn.red-bean.com/repos/kfogel/trunk/www/images/parchment-background.jpg);
-            width: auto;
-            height: auto;
-            border-radius: 1 px;
-            background-size: 100% auto;
-        }
-        
-    </style>
 
 
     <div class="album py-5 bg-light">
@@ -48,6 +22,7 @@
                                         <button class="btn " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{{$foto->id}}" aria-expanded="false" aria-controls="collapseExample">
                                             <x-bi-chat class="text-primary" /> {{count($foto->comentario)}}
                                         </button>
+                                        <a class="btn btn-outline-secondary" href="{{ url('/createPedidos/'.$foto->id) }}">Registro de Pedidos</a>
                                     </p>
                                 </div>
                                 <small class="text-muted">{{$foto->User->name}}</small>

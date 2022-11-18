@@ -17,6 +17,32 @@
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
   
 <style>nav {background-color: white;}
+
+        body{
+            background-color: #FFEEE5;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        .container{
+            background-image: url(https://svn.red-bean.com/repos/kfogel/trunk/www/images/parchment-background.jpg);
+            width: auto;
+            height: auto;
+            border-radius: 1 px;
+            background-size: 100% auto;
+        }
+        
+
   </style>
 </head>
 
@@ -26,8 +52,7 @@
       <a class="nav-link" aria-current="page" href="{{ url('/') }}">Presentación</a>
       <a class="nav-link" aria-current="page" href="{{ route('home') }}">Inicio</a>
       <a class="nav-link" href="{{ route('fotos') }}">Mis Productos</a>
-      <a class="nav-link" href="{{ route('envios') }}">Envios</a>
-      <a class="nav-link" href="{{ route('fotos') }}">Pedidos</a>
+      <a class="nav-link" href="{{ route('pedidos') }}">Pedidos</a>
 
           <ul class="navbar-nav ms-auto">
             <!-- Authentication Links -->
